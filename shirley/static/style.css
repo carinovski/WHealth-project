@@ -1,0 +1,50 @@
+/* For flashed messages; make them stand out using red and italics */
+label{
+    font-weight: bold;
+    font-style: italic;
+    }
+
+    a:visited{
+    color: rgb(7, 7, 7)
+    }
+
+    H1 {
+    color: rgb(22, 43, 163);
+    font-size: 200%;
+    }
+
+    #flashes {
+    color: rgb(112, 1, 66);
+    font-size: large;
+    font-style: italic;
+    }
+
+    form {
+    display: inline-block;
+    border: 5px solid rgb(0, 99, 129);
+    padding: 1ex;
+    border-radius: 2ex;
+    background-color: #e1f7f8cc;
+    }
+
+    [type=submit] {
+    font-size: 1em;
+    font-weight: normal;
+    border: 2px solid rgb(2, 0, 128);
+    border-radius: 0.5em;
+    background-color: rgb(208, 227, 255);
+    }
+
+    fieldset {
+    display: inline-block;
+    }
+
+    #iconlist {
+    list-style-type: none; /* no bullets */
+    padding: 0px;
+    }
+
+    #iconlist li {
+    display: inline;
+    }
+    

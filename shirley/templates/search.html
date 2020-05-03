@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+ 
+{% block main_content %}
+ 
+<h1>
+   Search for Health/Medical Service(s)!
+</h1>
+
+
+<form id="search" method="GET" action="/search/">
+    <fieldset>
+        <legend>Search for Health Service(s)</legend>
+        <table>
+            <tr><td><label for="suggestion-name">Name:</label></td>
+            <td><input type="text" name="suggestion-name" size = "50"
+                placeholder = "Enter (fragment of) name of health service..."></td></tr>
+            <tr><td><label for="suggestion-type">Type of Health Service:
+                <select required name = "suggestion-type">
+                    <option value = "Person">"Person (i.e. doctor, specialist)"</option>
+                    <option value = "Institution">Institution (i.e. hospital, clinic)</option>
+                    <option value = "Event">Event/Activity (i.e. Mental Health Day)</option>
+                </select>
+            </label></td>
+            <tr><td><label for="suggestion-specialization">
+                Specialization (i.e. mental health, alternative medicine, physical therapy, etc.):</label></td>
+                <td><input type="text" name="suggestion-specialization" size = "50"></td></tr>
+            <tr><td><label for="suggestion-address">Address:</label></td>
+                <td><input type="text" name="suggestion-address" size = "50"></td></tr>
+            <tr><td><label for="suggestion-phone">Phone Number:</label></td>
+                <td><input type="text" name="suggestion-phone" size = "50"></td></tr>
+            <tr><td><label for="suggestion-email">Email:</label></td>
+                <td><input type="text" name="suggestion-email" size = "50"></td></tr>
+            <tr><td><label for="suggestion-date">Date:</label></td>
+                <td><input type="text" name="suggestion-date" size = "50"></td></tr>
+            <tr><td><label for="suggestion-time">Time:</label></td>
+                <td><input type="text" name="suggestion-time" size = "50"></td></tr>
+            <tr><td><label for="suggestion-accomodate">Accomodates walk-ins, last minute appointments, etc.?
+                <select required name = "suggestion-accomodate">
+                    <option value = "yes">Yes</option>
+                    <option value = "no">No</option>
+                    <option value = "depends">Depends</option>
+                </select>
+            </label></td>
+            <tr><td><label for="suggestion-insurance">Do they accept (Wellesley) insurance?
+                <select required name = "suggestion-insurance">
+                    <option value = "yes">Yes</option>
+                    <option value = "no">No</option>
+                    <option value = "N/A">N/A</option>
+                </select>
+            </label></td>
+            </table>
+            </fieldset>
+    <p> <input type='submit' value='Search'> </p>
+</form>
+
+{% endblock %}

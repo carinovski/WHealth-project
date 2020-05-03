@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang='en'>
+<head>
+   <meta charset='utf-8'>
+   <meta name=author content="Shirley Wu">
+   <title>WHealth</title>
+   <link rel='stylesheet' href="{{url_for('static', filename = 'style.css')}}">
+   {% block head_stuff %} {% endblock %}
+</head>
+<body>
+          
+<div id="navigation">
+   <ul>
+       <li><a href="/">Home</a></li>
+       <li><a href = "/suggest/">Make a Suggestion</a></li>
+       <li><a href = "/search/">Search for a Health Service</a></li>
+       <li><a href = "/update/">Update a Suggestion</a></li>
+   </ul>
+</div>
+ 
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+       <div id="flashes">
+       {% for msg in messages %}
+           <p>{{msg}}</p>
+       {% endfor %}
+       </div>
+   {% endif %}
+{% endwith %}
+ 
+{% block main_content %}
+ 
+{% endblock %}
+ 
+</body>
+</html>
